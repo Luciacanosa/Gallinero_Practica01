@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="es" class="dark scroll-smooth">
+<!-- cursor-none + **:cursor-none en <html>: oculta la flecha en toda la ventana, también en enlaces y botones -->
+<html lang="es" class="dark scroll-smooth cursor-none **:cursor-none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><Cine El Gallinero></title>
+    <title>Cine Lido - Tu Cine de Barrio</title>
 
     <!-- tipografías importadas de Adobe -->
     <link rel="stylesheet" href="https://use.typekit.net/kie0hig.css" />
@@ -29,11 +30,19 @@
         --font-titulo: "pacaembu", sans-serif;
         --font-texto: "bulletin-typewriter", monospace;
       }
+
+      /* refuerzo: ninguna parte de la página muestra la flecha del sistema */
+      @layer base {
+        *,
+        *::before,
+        *::after {
+          cursor: none !important;
+        }
+      }
     </style>
   </head>
 
-  <!-- cursor-none + **:cursor-none: oculta el cursor del sistema en toda la página, también en enlaces y botones -->
-  <body class="cursor-none **:cursor-none">
+  <body class="min-h-screen">
     <!-- cursor personalizado: circulito rojo -->
     <div
       class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#6e0000] bg-[#6e0000] transition-[scale,background-color] duration-200 ease-in-out"
