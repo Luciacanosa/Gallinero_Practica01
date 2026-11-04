@@ -367,6 +367,139 @@
         </ul>
       </div>
     </section>
+    <!-- FORMULARIO DE ALTA -->
+    <section
+      id="alta"
+      class="bg-noche text-papel dark:bg-papel dark:text-noche"
+      aria-labelledby="titulo-alta"
+    >
+      <div
+        class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2 md:px-10 md:py-28"
+      >
+        <div data-aos="fade-right">
+          <p
+            class="mb-6 font-mono text-xs uppercase tracking-widest text-butaca"
+          >
+            ( Alta de socio )
+          </p>
+          <h2
+            id="titulo-alta"
+            class="text-5xl leading-none font-black tracking-tighter uppercase md:text-7xl"
+          >
+            Tu carnet<br />en un minuto
+          </h2>
+          <p class="mt-8 max-w-sm text-papel/70 dark:text-noche/70">
+            Rellena tus datos y recógelo en taquilla la próxima vez que vengas.
+          </p>
+
+          <!-- resumen del precio (se actualiza con jQuery) -->
+          <p class="mt-10 font-mono text-xs uppercase tracking-widest">Total</p>
+          <p id="resumen" class="text-4xl font-black">9 € / mes</p>
+        </div>
+
+        <div>
+          <form
+            id="form-socio"
+            class="space-y-8"
+            data-aos="fade-left"
+            novalidate
+          >
+            <label class="block">
+              <span class="font-mono text-xs uppercase tracking-widest"
+                >Nombre y apellidos</span
+              >
+              <input
+                name="nombre"
+                type="text"
+                required
+                autocomplete="name"
+                class="mt-2 w-full border-b-2 border-papel bg-transparent py-3 text-xl outline-none placeholder:text-papel/30 focus:border-butaca dark:border-noche dark:placeholder:text-noche/30"
+                placeholder="Tu nombre"
+              />
+            </label>
+            <label class="block">
+              <span class="font-mono text-xs uppercase tracking-widest"
+                >Correo</span
+              >
+              <input
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                class="mt-2 w-full border-b-2 border-papel bg-transparent py-3 text-xl outline-none placeholder:text-papel/30 focus:border-butaca dark:border-noche dark:placeholder:text-noche/30"
+                placeholder="tu@correo.com"
+              />
+            </label>
+            <label class="block">
+              <span class="font-mono text-xs uppercase tracking-widest"
+                >Plan</span
+              >
+              <select
+                id="plan"
+                name="plan"
+                class="mt-2 w-full border-b-2 border-papel bg-noche py-3 text-xl outline-none focus:border-butaca dark:border-noche dark:bg-papel"
+              >
+                <option value="Butaca">Butaca</option>
+                <option value="Gallinero" selected>Gallinero</option>
+                <option value="Familia">Familia</option>
+              </select>
+            </label>
+            <label class="flex items-start gap-3">
+              <input
+                name="normas"
+                type="checkbox"
+                required
+                class="mt-1 size-5 accent-butaca"
+              />
+              <span class="text-sm"
+                >Acepto las normas de la sala y que me escribáis con la
+                programación.</span
+              >
+            </label>
+
+            <p
+              id="form-error"
+              class="hidden font-mono text-xs uppercase tracking-widest text-butaca"
+            >
+              Revisa tu nombre, un correo válido y acepta las normas.
+            </p>
+
+            <button
+              type="submit"
+              class="w-full bg-butaca py-5 font-mono text-sm font-bold uppercase tracking-widest text-noche transition hover:bg-papel focus-visible:bg-papel dark:hover:bg-noche dark:hover:text-papel"
+            >
+              Quiero mi carnet →
+            </button>
+          </form>
+
+          <!-- carnet de socio que aparece al enviar (animación del CSS propio) -->
+          <div id="carnet" class="hidden">
+            <div class="animate-carnet ticket bg-butaca p-8 text-noche">
+              <p class="font-mono text-xs uppercase tracking-widest">
+                Carnet de socio · El Gallinero
+              </p>
+              <p
+                id="carnet-nombre"
+                class="mt-6 text-4xl leading-none font-black uppercase"
+              ></p>
+              <div
+                class="my-6 border-t-2 border-dashed border-current opacity-35"
+              ></div>
+              <div
+                class="flex justify-between font-mono text-sm uppercase tracking-widest"
+              >
+                <span>Plan <strong id="carnet-plan"></strong></span>
+                <span>Nº <strong id="carnet-num"></strong></span>
+              </div>
+            </div>
+            <p class="mt-6 text-papel/70 dark:text-noche/70">
+              ¡Bienvenido al Gallinero! Te hemos enviado un correo de
+              confirmación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
