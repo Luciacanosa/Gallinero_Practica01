@@ -21,3 +21,31 @@ $(document).on(
       .addClass("bg-butaca");
   },
 );
+
+// menu hambuerguesa para el navbar
+// lógica del menu (simplemente el clik en un icono)
+// selección de elementos del html
+let burger = document.querySelector(".burger > i");
+let menu_opt = document.querySelector(".menu");
+// definimos evneto click sobre le botón del menú
+burger.addEventListener("click", function () {
+  burger.classList.toggle("fa-bars");
+  burger.classList.toggle("fa-times");
+  menu_opt.classList.toggle("menu-show");
+});
+
+// extra: que el icono del menú también funcione al darle con el teclado
+burger.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    burger.click();
+  }
+});
+
+// ----- header: enlace de la pagina en la que estas -----
+const paginaActual = window.location.pathname.split("/").pop() || "index.html";
+$(".menu a").each(function () {
+  if ($(this).attr("href") === paginaActual) {
+    $(this).addClass("text-butaca").attr("aria-current", "page");
+  }
+});
