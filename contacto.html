@@ -256,6 +256,61 @@
           <p class="mt-2 text-sm text-gris">Lunes cerrado</p>
         </article>
       </section>
+      <!-- DÓNDE ESTAMOS: mapa -->
+      <section
+        id="donde"
+        class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28"
+      >
+        <div
+          class="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+        >
+          <h2
+            class="text-5xl leading-none font-black tracking-tighter uppercase md:text-8xl"
+            data-aos="fade-right"
+          >
+            Dónde<br />estamos
+          </h2>
+          <ul
+            class="flex w-full flex-col gap-3 font-mono text-xs uppercase tracking-widest text-noche/70 md:w-auto dark:text-papel/70"
+            data-aos="fade-left"
+          >
+            <li class="flex items-baseline gap-4">
+              <span class="w-24 shrink-0 text-butaca">Metro</span>
+              <span>Lavapiés (L3)</span>
+            </li>
+            <li class="flex items-baseline gap-4">
+              <span class="w-24 shrink-0 text-butaca">Bici</span>
+              <span>Aparcabicis en la puerta</span>
+            </li>
+            <li class="flex items-baseline gap-4">
+              <span class="w-24 shrink-0 text-butaca">Accesible</span>
+              <span>Entrada a pie de calle</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="group relative overflow-hidden border border-papel/15"
+          data-aos="zoom-in"
+        >
+          <!-- el mapa en blanco y negro; se colorea al pasar el ratón -->
+          <iframe
+            title="Mapa de El Gallinero en Lavapiés, Madrid"
+            src="https://maps.google.com/maps?q=40.4087,-3.7010&z=16&output=embed"
+            class="h-[420px] w-full grayscale invert transition duration-700 group-hover:grayscale-0 group-hover:invert-0 md:h-[520px]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=40.4087,-3.7010"
+            target="_blank"
+            rel="noopener"
+            class="absolute bottom-5 left-5 bg-butaca px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest text-noche transition-colors hover:bg-papel"
+          >
+            Cómo llegar →
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- foter-->
