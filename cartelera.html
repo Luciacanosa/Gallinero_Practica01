@@ -134,52 +134,33 @@
       </nav>
     </header>
     <main class="overflow-x-hidden">
-      <!-- CINTA (Swiper): palabra gigante que se desliza -->
-      <section class="border-b border-papel/15 py-6" aria-hidden="true">
+      <!-- CINTA: palabra gigante que se desliza (animación CSS, velocidad siempre constante) -->
+      <section
+        class="overflow-hidden border-b border-noche/15 py-6 dark:border-papel/15"
+        aria-hidden="true"
+      >
         <div
-          class="swiper cinta [--swiper-wrapper-transition-timing-function:linear]"
+          class="flex w-max animate-marquee text-[18vw] leading-none font-black tracking-tighter uppercase md:text-[11vw]"
         >
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black tracking-tighter uppercase md:text-[11vw]"
+          <!-- bloque 1 -->
+          <div class="flex items-center">
+            <span class="pr-10">Cartelera</span>
+            <span class="pr-10 text-butaca">✦</span>
+            <span
+              class="pr-10 text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
+              >Cartelera</span
             >
-              Cartelera
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black text-butaca md:text-[11vw]"
+            <span class="pr-10 text-butaca">✦</span>
+          </div>
+          <!-- bloque 2: copia exacta del 1 para que el bucle no se note -->
+          <div class="flex items-center">
+            <span class="pr-10">Cartelera</span>
+            <span class="pr-10 text-butaca">✦</span>
+            <span
+              class="pr-10 text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
+              >Cartelera</span
             >
-              ✦
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black tracking-tighter uppercase text-transparent [-webkit-text-stroke:2px_#f2efe9] md:text-[11vw]"
-            >
-              Cartelera
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black text-butaca md:text-[11vw]"
-            >
-              ✦
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black tracking-tighter uppercase md:text-[11vw]"
-            >
-              Cartelera
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black text-butaca md:text-[11vw]"
-            >
-              ✦
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black tracking-tighter uppercase text-transparent [-webkit-text-stroke:2px_#f2efe9] md:text-[11vw]"
-            >
-              Cartelera
-            </div>
-            <div
-              class="swiper-slide !w-auto text-[18vw] leading-none font-black text-butaca md:text-[11vw]"
-            >
-              ✦
-            </div>
+            <span class="pr-10 text-butaca">✦</span>
           </div>
         </div>
       </section>
@@ -199,13 +180,179 @@
           En <span class="text-butaca">pantalla</span>
         </h1>
         <p
-          class="mt-8 max-w-xl text-lg text-papel/70"
+          class="mt-8 max-w-xl text-lg text-noche/70 dark:text-papel/70"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           Una sala, seis películas y casi todo en versión original. Desliza para
           ver las destacadas y elige el día para ver los horarios.
         </p>
+      </section>
+      <!-- DESTACADAS (Swiper) -->
+      <section class="mx-auto max-w-7xl px-5 pb-20 md:px-10" data-aos="fade-up">
+        <div class="mb-6 flex items-center justify-between">
+          <p class="font-mono text-xs uppercase tracking-widest text-butaca">
+            (01) Destacadas
+          </p>
+          <p class="font-mono text-xs uppercase tracking-widest text-gris">
+            Arrastra para ver más →
+          </p>
+        </div>
+
+        <div class="swiper destacadas">
+          <div class="swiper-wrapper">
+            <!-- 1 -->
+            <article class="swiper-slide">
+              <div class="aspect-[2/3] overflow-hidden">
+                <img
+                  src="img/espiritu%20de%20colmena.png"
+                  alt="Póster de El espíritu de la colmena"
+                  class="size-full object-cover"
+                />
+              </div>
+              <p
+                class="mt-4 font-mono text-xs uppercase tracking-widest text-butaca"
+              >
+                VOSE · Clásico
+              </p>
+              <h3
+                class="mt-2 text-2xl leading-[0.95] font-black tracking-tighter uppercase md:text-3xl"
+              >
+                El espíritu de la colmena
+              </h3>
+              <p
+                class="mt-2 font-mono text-xs uppercase tracking-widest text-gris"
+              >
+                Víctor Erice · 1973
+              </p>
+            </article>
+            <!-- 2 -->
+            <article class="swiper-slide">
+              <div class="aspect-[2/3] overflow-hidden">
+                <img
+                  src="img/mujeres%20borde%20nervios.jpg"
+                  alt="Póster de Mujeres al borde de un ataque de nervios"
+                  class="size-full object-cover"
+                />
+              </div>
+              <p
+                class="mt-4 font-mono text-xs uppercase tracking-widest text-butaca"
+              >
+                Comedia
+              </p>
+              <h3
+                class="mt-2 text-2xl leading-[0.95] font-black tracking-tighter uppercase md:text-3xl"
+              >
+                Mujeres al borde de un ataque de nervios
+              </h3>
+              <p
+                class="mt-2 font-mono text-xs uppercase tracking-widest text-gris"
+              >
+                Pedro Almodóvar · 1988
+              </p>
+            </article>
+            <!-- 3 -->
+            <article class="swiper-slide">
+              <div class="aspect-[2/3] overflow-hidden">
+                <img
+                  src="img/cinco%20lobitos.jpg"
+                  alt="Póster de Cinco lobitos"
+                  class="size-full object-cover"
+                />
+              </div>
+              <p
+                class="mt-4 font-mono text-xs uppercase tracking-widest text-butaca"
+              >
+                Drama
+              </p>
+              <h3
+                class="mt-2 text-2xl leading-[0.95] font-black tracking-tighter uppercase md:text-3xl"
+              >
+                Cinco lobitos
+              </h3>
+              <p
+                class="mt-2 font-mono text-xs uppercase tracking-widest text-gris"
+              >
+                Alauda Ruiz de Azúa · 2022
+              </p>
+            </article>
+            <!-- 4 -->
+            <article class="swiper-slide">
+              <div class="aspect-[2/3] overflow-hidden">
+                <img
+                  src="img/as%20bestas.jpg"
+                  alt="Póster de As bestas"
+                  class="size-full object-cover"
+                />
+              </div>
+              <p
+                class="mt-4 font-mono text-xs uppercase tracking-widest text-butaca"
+              >
+                Thriller
+              </p>
+              <h3
+                class="mt-2 text-2xl leading-[0.95] font-black tracking-tighter uppercase md:text-3xl"
+              >
+                As bestas
+              </h3>
+              <p
+                class="mt-2 font-mono text-xs uppercase tracking-widest text-gris"
+              >
+                Rodrigo Sorogoyen · 2022
+              </p>
+            </article>
+            <!-- 5 -->
+            <article class="swiper-slide">
+              <div class="aspect-[2/3] overflow-hidden">
+                <img
+                  src="img/sociedad%20nieve.jpg"
+                  alt="Póster de La sociedad de la nieve"
+                  class="size-full object-cover"
+                />
+              </div>
+              <p
+                class="mt-4 font-mono text-xs uppercase tracking-widest text-butaca"
+              >
+                Drama
+              </p>
+              <h3
+                class="mt-2 text-2xl leading-[0.95] font-black tracking-tighter uppercase md:text-3xl"
+              >
+                La sociedad de la nieve
+              </h3>
+              <p
+                class="mt-2 font-mono text-xs uppercase tracking-widest text-gris"
+              >
+                J. A. Bayona · 2023
+              </p>
+            </article>
+            <!-- 6 -->
+            <article class="swiper-slide">
+              <div class="aspect-[2/3] overflow-hidden">
+                <img
+                  src="img/perfect%20days.jpg"
+                  alt="Póster de Perfect Days"
+                  class="size-full object-cover"
+                />
+              </div>
+              <p
+                class="mt-4 font-mono text-xs uppercase tracking-widest text-butaca"
+              >
+                VOSE · Drama
+              </p>
+              <h3
+                class="mt-2 text-2xl leading-[0.95] font-black tracking-tighter uppercase md:text-3xl"
+              >
+                Perfect Days
+              </h3>
+              <p
+                class="mt-2 font-mono text-xs uppercase tracking-widest text-gris"
+              >
+                Wim Wenders · 2023
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
 
