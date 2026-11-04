@@ -61,3 +61,17 @@ $(".arriba").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, 600);
 });
+
+// ===== Cartelera  =====
+
+AOS.init({ duration: 800, once: true, offset: 60 });
+
+// Swiper (cinta de texto infinita)
+new Swiper(".cinta", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  speed: 7000,
+  allowTouchMove: false,
+  autoplay: { delay: 0, disableOnInteraction: false },
+});

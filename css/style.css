@@ -1,0 +1,32 @@
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+/* el texto está repetido dos veces: al moverse la mitad vuelve al principio sin corte */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* cartlera palabra gigante */
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+/* el texto está repetido dos veces: al moverse la mitad vuelve al principio sin corte */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
