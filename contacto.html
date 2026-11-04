@@ -120,17 +120,48 @@
         class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
         >Contacto</a
       >
-      <!-- botón modo claro / oscuro -->
-      <button
-        id="btn-tema"
-        class="mt-2 whitespace-nowrap border border-noche/30 px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:border-butaca hover:text-butaca md:mt-0 dark:border-papel/30"
-        aria-label="Cambiar modo claro u oscuro"
+        <!-- botón modo claro / oscuro -->
+        <button
+          id="btn-tema"
+          class="mt-2 whitespace-nowrap border border-noche/30 px-3 py-2 font-mono text-xs uppercase tracking-widest text-noche transition-colors hover:border-butaca hover:text-butaca md:mt-0 dark:border-papel/30 dark:text-papel dark:hover:text-butaca"
+          aria-label="Cambiar modo claro u oscuro"
+        >
+          <span class="dark:hidden">☾ Oscuro</span>
+          <span class="hidden dark:inline">☀ Claro</span>
+        </button>
+      </nav>
+    </header>
+    <main class="overflow-x-hidden">
+      <!-- CINTA: palabra gigante que se desliza (animación CSS, velocidad siempre constante) -->
+      <section
+        class="overflow-hidden border-b border-noche/15 bg-papel py-6 text-noche dark:border-papel/15 dark:bg-noche dark:text-papel"
+        aria-hidden="true"
       >
-        <span class="dark:hidden">☾ Oscuro</span>
-        <span class="hidden dark:inline">☀ Claro</span>
-      </button>
-    </nav>
-  </header>
+        <div
+          class="flex w-max animate-marquee text-[18vw] leading-none font-black tracking-tighter uppercase md:text-[11vw]"
+        >
+          <!-- bloque 1 -->
+          <div class="flex items-center">
+            <span class="pr-10 text-noche dark:text-papel">Contacto</span>
+            <span class="pr-10 text-butaca">✦</span>
+            <span
+              class="pr-10 text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
+              >Contacto</span
+            >
+            <span class="pr-10 text-butaca">✦</span>
+          </div>
+          <!-- bloque 2: copia exacta del 1 para que el bucle no se note -->
+          <div class="flex items-center">
+            <span class="pr-10 text-noche dark:text-papel">Contacto</span>
+            <span class="pr-10 text-butaca">✦</span>
+            <span
+              class="pr-10 text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
+              >Contacto</span
+            >
+            <span class="pr-10 text-butaca">✦</span>
+          </div>
+        </div>
+      </section>
   <!-- foter-->
   <footer class="border-t border-noche/15 dark:border-papel/15">
     <div

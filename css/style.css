@@ -1,4 +1,3 @@
-
 @layer utilities {
   .animate-marquee {
     animation: marquee 30s linear infinite;
@@ -31,7 +30,7 @@
     transform: translateX(-50%);
   }
 }
-=======
+
 /* css del index.html */
 
 /* mismo orden de capas que Tailwind v4: sus utilidades siempre ganan */
@@ -235,4 +234,3 @@
 }
 /* est es para navbar modo oscuro claro */
 @custom-variant dark (&:where(.dark, .dark *)); /* dentro de <style type="text/tailwindcss">, encima de @theme */
-
