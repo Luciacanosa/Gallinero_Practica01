@@ -61,3 +61,22 @@ $(".arriba").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, 600);
 });
+
+// AOS: hace visibles los elementos con data-aos al hacer scroll
+AOS.init({ duration: 800, once: true, offset: 60 });
+
+// Typed.js: el final del titular se escribe solo
+new Typed("#typed", {
+  strings: [
+    "tienes una duda.",
+    "quieres alquilar la sala.",
+    "vienes con el cole.",
+    "nos propones una peli.",
+    "solo quieres saludar.",
+  ],
+  typeSpeed: 55,
+  backSpeed: 30,
+  backDelay: 1600,
+  loop: true,
+  cursorChar: "_",
+});

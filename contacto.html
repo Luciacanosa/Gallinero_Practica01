@@ -1,139 +1,148 @@
 <!doctype html>
-
 <html lang="es" class="scroll-smooth cursor-none **:cursor-none">
-  <!doctype html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Gallinero · Cine de barrio en Lavapiés</title>
+    <meta
+      name="description"
+      content="El Gallinero, cine de barrio en Lavapiés: cartelera en versión original, cineclub, matinales y alquiler de sala."
+    />
 
-  <html lang="es" class="dark">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>El Gallinero · Cine de barrio en Lavapiés</title>
-      <meta
-        name="description"
-        content="El Gallinero, cine de barrio en Lavapiés: cartelera en versión original, cineclub, matinales y alquiler de sala."
-      />
+    <!-- modo claro/oscuro: se aplica antes de pintar (por defecto, claro) -->
+    <script>
+      try {
+        if (localStorage.getItem("tema") === "oscuro")
+          document.documentElement.classList.add("dark");
+      } catch (e) {}
+    </script>
 
-      <!-- tipografías -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
+    <!-- tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Archivo 900 en versión estática: el contorno de las letras sale limpio -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/archivo@5.3.0/900.css"
+    />
 
-      <!-- Font Awesome: iconos del menú hamburguesa -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      />
+    <!-- Font Awesome: iconos del menú hamburguesa -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-      <!-- jQuery -->
-      <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 
-      <!-- AOS -->
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-      <!-- Swiper -->
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css"
-      />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css"
+    />
 
-      <!-- Tailwind CSS v4 CDN -->
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-      <!-- sistema de diseño con @theme + modo oscuro con la clase .dark -->
-      <style type="text/tailwindcss">
-        @custom-variant dark (&:where(.dark, .dark *));
-        @theme {
-          --color-noche: #0e0e0e;
-          --color-butaca: #e63b2e;
-          --color-papel: #f2efe9;
-          --color-gris: #8a8780;
-          --font-cartel: "Archivo", sans-serif;
-          --font-mono: "Space Mono", monospace;
-        }
-      </style>
+    <!-- sistema de diseño con @theme + modo oscuro con la clase .dark -->
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --color-noche: #0e0e0e;
+        --color-butaca: #e63b2e;
+        --color-papel: #f2efe9;
+        --color-gris: #8a8780;
+        --font-cartel: "Archivo", sans-serif;
+        --font-mono: "Space Mono", monospace;
+      }
+    </style>
 
-      <!-- hoja de estilos propia: solo lo que Tailwind no resuelve (animaciones y forma de entrada) -->
-      <link rel="stylesheet" href="css/style.css" />
-    </head>
+    <!-- hoja de estilos propia: solo lo que Tailwind no resuelve (animaciones y forma de entrada) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <body
-      class="min-h-screen bg-papel font-cartel text-noche transition-colors duration-300 selection:bg-butaca selection:text-noche dark:bg-noche dark:text-papel"
+  <body
+    class="min-h-screen bg-papel font-cartel text-noche transition-colors duration-300 selection:bg-butaca selection:text-noche dark:bg-noche dark:text-papel"
+  >
+    <!-- cursor personalizado -->
+    <div
+      class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-butaca bg-butaca transition-[scale,background-color] duration-200 ease-in-out"
+    ></div>
+
+    <!-- header -->
+    <header
+      class="navbar sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-noche/15 bg-papel/90 px-5 py-3 backdrop-blur md:px-10 dark:border-papel/15 dark:bg-noche/90"
     >
-      <!-- cursor personalizado -->
-      <div
-        class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-butaca bg-butaca transition-[scale,background-color] duration-200 ease-in-out"
-      ></div>
+      <div class="logo">
+        <a href="index.html" class="group flex items-center gap-3">
+          <img
+            src="img/gallinero%20logo.png"
+            alt="Logo de El Gallinero"
+            width="800"
+            height="737"
+            class="h-10 w-auto transition-transform duration-300 group-hover:-rotate-6 group-focus-visible:-rotate-6 md:h-12 dark:brightness-[1.7]"
+          />
+          <span
+            class="text-lg leading-none font-black tracking-tight uppercase md:text-xl"
+            >El Gallinero<span class="text-butaca">.</span></span
+          >
+        </a>
+      </div>
+      <!-- Icono hamburguesa -->
+      <div class="burger md:hidden">
+        <i
+          class="fas fa-bars p-2 text-2xl text-noche transition-colors hover:text-butaca focus-visible:text-butaca dark:text-papel"
+          role="button"
+          tabindex="0"
+          aria-label="Abrir o cerrar el menú"
+        ></i>
+      </div>
 
-      <!-- header -->
-      <header
-        class="navbar sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-noche/15 bg-papel/90 px-5 py-3 backdrop-blur md:px-10 dark:border-papel/15 dark:bg-noche/90"
+      <!-- Menú de navegación -->
+      <nav
+        class="nav-links menu absolute inset-x-0 top-full hidden flex-col items-start border-b border-noche/15 bg-papel px-5 py-4 font-mono text-sm uppercase tracking-widest md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-xs dark:border-papel/15 dark:bg-noche md:dark:bg-transparent [&.menu-show]:flex"
+        aria-label="Principal"
       >
-        <div class="logo">
-          <a href="index.html" class="group flex items-center gap-3">
-            <img
-              src="img/gallinero logo.png"
-              alt="Logo de El Gallinero"
-              width="800"
-              height="737"
-              class="h-10 w-auto transition-transform duration-300 group-hover:-rotate-6 group-focus-visible:-rotate-6 md:h-12 dark:brightness-[1.7]"
-            />
-            <span
-              class="text-lg leading-none font-black tracking-tight uppercase md:text-xl"
-              >El Gallinero<span class="text-butaca">.</span></span
-            >
-          </a>
-        </div>
-        <!-- Icono hamburguesa -->
-        <div class="burger md:hidden">
-          <i
-            class="fas fa-bars p-2 text-2xl text-noche transition-colors hover:text-butaca focus-visible:text-butaca dark:text-papel"
-            role="button"
-            tabindex="0"
-            aria-label="Abrir o cerrar el menú"
-          ></i>
-        </div>
-
-        <!-- Menú de navegación -->
-        <nav
-          class="nav-links menu absolute inset-x-0 top-full hidden flex-col items-start border-b border-noche/15 bg-papel px-5 py-4 font-mono text-sm uppercase tracking-widest md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-xs dark:border-papel/15 dark:bg-noche md:dark:bg-transparent [&.menu-show]:flex"
-          aria-label="Principal"
+        <a
+          href="index.html"
+          class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+          >Inicio</a
         >
-          <a
-            href="index.html"
-            class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
-            >Inicio</a
-          >
-          <a
-            href="cartelera.html"
-            class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
-            >Cartelera</a
-          >
-          <a
-            href="socio.html"
-            class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
-            >Hazte socio</a
-          >
-          <a
-            href="contacto.html"
-            class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
-            >Contacto</a
-          >
-          <!-- botón modo claro / oscuro -->
-          <button
-            id="btn-tema"
-            class="mt-2 whitespace-nowrap border border-noche/30 px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:border-butaca hover:text-butaca md:mt-0 dark:border-papel/30"
-            aria-label="Cambiar modo claro u oscuro"
-          >
-            <span class="dark:hidden">☾ Oscuro</span>
-            <span class="hidden dark:inline">☀ Claro</span>
-          </button>
-        </nav>
-      </header>
+        <a
+          href="cartelera.html"
+          class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+          >Cartelera</a
+        >
+        <a
+          href="socio.html"
+          class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+          >Hazte socio</a
+        >
+        <a
+          href="contacto.html"
+          class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+          >Contacto</a
+        >
+        <!-- botón modo claro / oscuro -->
+        <button
+          id="btn-tema"
+          class="mt-2 whitespace-nowrap border border-noche/30 px-3 py-2 font-mono text-xs uppercase tracking-widest text-noche transition-colors hover:border-butaca hover:text-butaca md:mt-0 dark:border-papel/30 dark:text-papel dark:hover:text-butaca"
+          aria-label="Cambiar modo claro u oscuro"
+        >
+          <span class="dark:hidden">☾ Oscuro</span>
+          <span class="hidden dark:inline">☀ Claro</span>
+        </button>
+      </nav>
+    </header>
 
-         <main class="overflow-x-hidden">
+    <main class="overflow-x-hidden">
       <!-- CINTA: palabra gigante que se desliza (animación CSS, velocidad siempre constante) -->
       <section
         class="overflow-hidden border-b border-noche/15 py-6 dark:border-papel/15"
@@ -164,6 +173,90 @@
           </div>
         </div>
       </section>
+      <!-- INTRO con texto que se escribe solo (Typed.js) -->
+      <section class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+        <p
+          class="mb-6 font-mono text-xs uppercase tracking-widest text-gris"
+          data-aos="fade-up"
+        >
+          somos muy de barrio, nos gusta charlar y nos encanta resolver vuestras
+          dudas
+        </p>
+        <h1
+          class="max-w-5xl text-4xl leading-[0.95] font-black tracking-tight uppercase md:text-7xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Escríbenos si
+          <span id="typed" class="text-butaca"></span>
+        </h1>
+      </section>
+      <!-- DATOS DE CONTACTO (flexbox) -->
+      <section
+        class="mx-auto flex max-w-7xl flex-col gap-px border-y border-noche/15 bg-noche/15 md:flex-row dark:border-papel/15 dark:bg-papel/15"
+      >
+        <article
+          class="flex-1 bg-papel p-8 md:p-10 dark:bg-noche"
+          data-aos="fade-up"
+        >
+          <p
+            class="mb-6 font-mono text-xs uppercase tracking-widest text-butaca"
+          >
+            01 Dirección
+          </p>
+          <p class="text-2xl leading-tight font-bold">
+            Calle de Jedet, 67<br />28012 Madrid
+          </p>
+        </article>
+        <article
+          class="flex-1 bg-papel p-8 md:p-10 dark:bg-noche"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <p
+            class="mb-6 font-mono text-xs uppercase tracking-widest text-butaca"
+          >
+            02 Teléfono
+          </p>
+          <a
+            href="tel:+34910000000"
+            class="text-2xl leading-tight font-bold transition-colors hover:text-butaca"
+            >91 000 00 00</a
+          >
+          <p class="mt-2 text-sm text-gris">Horario de 11:00 a 22:30</p>
+        </article>
+        <article
+          class="flex-1 bg-papel p-8 md:p-10 dark:bg-noche"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <p
+            class="mb-6 font-mono text-xs uppercase tracking-widest text-butaca"
+          >
+            03 Correo
+          </p>
+          <a
+            href="mailto:hola@elgallinerocine.es"
+            class="text-lg leading-tight font-bold break-all transition-colors hover:text-butaca lg:text-xl"
+            >hola@elgallinerocine.es</a
+          >
+          <p class="mt-2 text-sm text-gris">Respondemos lo antes posible</p>
+        </article>
+        <article
+          class="flex-1 bg-papel p-8 md:p-10 dark:bg-noche"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <p
+            class="mb-6 font-mono text-xs uppercase tracking-widest text-butaca"
+          >
+            04 Horario
+          </p>
+          <p class="text-2xl leading-tight font-bold">Mar – Dom</p>
+          <p class="mt-2 text-sm text-gris">Lunes cerrado</p>
+        </article>
+      </section>
+    </main>
 
     <!-- foter-->
     <footer class="border-t border-noche/15 dark:border-papel/15">
