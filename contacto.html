@@ -9,7 +9,7 @@
       content="El Gallinero, cine de barrio en Lavapiés: cartelera en versión original, cineclub, matinales y alquiler de sala."
     />
 
-    <!-- modo claro/oscuro: se aplica antes de pintar (por defecto, claro) -->
+    <!-- modo claro/oscuro -->
     <script>
       try {
         if (localStorage.getItem("tema") === "oscuro")
@@ -24,7 +24,6 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Archivo 900 en versión estática: el contorno de las letras sale limpio -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fontsource/archivo@5.3.0/900.css"
@@ -75,6 +74,13 @@
     <div
       class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-butaca bg-butaca transition-[scale,background-color] duration-200 ease-in-out"
     ></div>
+        <!-- logo gigante de fondo (decorativo, no hace nada) -->
+    <img
+      src="img/gallinero%20logo.png"
+      alt=""
+      aria-hidden="true"
+      class="pointer-events-none fixed top-1/2 left-1/2 -z-10 w-[90vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 opacity-[0.06] select-none dark:opacity-[0.08] dark:brightness-[1.7]"
+    />
 
     <!-- header -->
     <header
@@ -311,6 +317,27 @@
           </a>
         </div>
       </section>
+       <!-- Dudas frecuentes con jquery esto  -->
+        <section class="border-t border-papel/15">
+          <div
+            class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-[1fr_2fr] md:px-10 md:py-28"
+          >
+            <h2
+              class="text-5xl leading-none font-black tracking-tighter uppercase md:text-7xl"
+              data-aos="fade-up"
+            >
+              ¿Alguna<br /><span class="text-butaca">duda?</span>
+            </h2>
+
+            <div
+              class="divide-y divide-papel/15 border-y border-papel/15"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="faq">
+                <button
+                  class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left text-xl font-bold md:text-2xl"
+                >
     </main>
 
     <!-- foter-->

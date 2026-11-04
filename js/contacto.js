@@ -80,3 +80,21 @@ new Typed("#typed", {
   loop: true,
   cursorChar: "_",
 });
+
+//  elementos plegables
+$("#menu-movil, .faq-texto").removeClass("hidden").hide();
+
+// jQuery: menú móvil
+$("#btn-menu").on("click", function () {
+  $("#menu-movil").slideToggle(250);
+  $(this).text($(this).text().trim() === "Menú +" ? "Cerrar –" : "Menú +");
+});
+
+// jQuery: acordeón de dudas
+$(".faq-btn").on("click", function () {
+  const $faq = $(this).closest(".faq");
+  $(".faq").not($faq).find(".faq-texto").slideUp(250);
+  $(".faq").not($faq).find(".faq-icono").removeClass("rotate-45");
+  $faq.find(".faq-texto").slideToggle(250);
+  $faq.find(".faq-icono").toggleClass("rotate-45");
+});
