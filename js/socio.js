@@ -57,3 +57,10 @@ $("#btn-tema").on("click", function () {
     localStorage.setItem("tema", oscuro ? "oscuro" : "claro");
   } catch (e) {}
 });
+
+// ----- footer: año actual y volver arriba -----
+$(".anio").text(new Date().getFullYear());
+$(".arriba").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, 600);
+});
