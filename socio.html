@@ -114,10 +114,285 @@
       </button>
     </nav>
   </header>
+  <main class="overflow-x-hidden">
+    <!-- PORTADA -->
+    <section
+      id="portada"
+      class="relative overflow-hidden border-b border-noche/15 dark:border-papel/15"
+    >
+      <div
+        class="pointer-events-none absolute -top-1/4 -right-1/4 h-[150%] w-2/3 origin-top-right animate-haz bg-linear-to-b from-butaca/25 via-butaca/5 to-transparent blur-2xl dark:from-papel/15 dark:via-papel/5"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="relative mx-auto max-w-7xl px-5 pt-16 pb-20 md:px-10 md:pt-28 md:pb-28"
+      >
+        <p
+          class="mb-6 font-mono text-xs uppercase tracking-widest text-gris"
+          data-aos="fade-up"
+        >
+          ( Socios del Gallinero )
+        </p>
+        <h1
+          class="text-[15vw] leading-[0.85] font-black tracking-tighter uppercase md:text-[8.5rem]"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Ven más.<br /><span class="text-butaca">Paga menos.</span>
+        </h1>
+        <p
+          class="mt-8 min-h-[2.5em] max-w-3xl text-2xl font-bold md:text-4xl"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Ser socio es <span id="typed" class="text-butaca"></span>
+        </p>
+        <a
+          href="#planes"
+          class="mt-6 inline-block bg-butaca px-6 py-4 font-mono text-sm font-bold uppercase tracking-widest text-noche transition hover:-translate-y-0.5 hover:bg-noche hover:text-papel focus-visible:-translate-y-0.5 dark:hover:bg-papel dark:hover:text-noche"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Ver planes ↓
+        </a>
+      </div>
+      <div
+        class="h-10 animate-tira bg-noche bg-[radial-gradient(circle,#f2efe9_5px,transparent_6px)] bg-[length:36px_100%] bg-repeat-x"
+        aria-hidden="true"
+      ></div>
+    </section>
 
+    <!-- PLANES -->
+    <section
+      id="planes"
+      class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28"
+      aria-labelledby="titulo-planes"
+    >
+      <div
+        class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+      >
+        <h2
+          id="titulo-planes"
+          class="text-5xl leading-none font-black tracking-tighter uppercase md:text-8xl"
+          data-aos="fade-right"
+        >
+          Planes
+        </h2>
+
+        <!-- interruptor mensual / anual (jQuery) -->
+        <div
+          class="flex border border-noche/30 font-mono text-xs uppercase tracking-widest dark:border-papel/30"
+          role="group"
+          aria-label="Forma de pago"
+          data-aos="fade-left"
+        >
+          <button
+            class="btn-pago bg-butaca px-5 py-3 text-noche"
+            data-pago="mes"
+            aria-pressed="true"
+          >
+            Mensual
+          </button>
+          <button
+            class="btn-pago px-5 py-3 transition-colors hover:text-butaca"
+            data-pago="anio"
+            aria-pressed="false"
+          >
+            Anual · 2 meses gratis
+          </button>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- plan 1 -->
+          <article
+            class="plan ticket flex flex-col gap-6 bg-noche/5 p-8 transition hover:-translate-y-1 focus-within:-translate-y-1 dark:bg-papel/5"
+            data-plan="Butaca"
+            data-aos="fade-up"
+          >
+            <p class="font-mono text-xs uppercase tracking-widest text-butaca">
+              (01)
+            </p>
+            <h3 class="text-4xl leading-none font-black uppercase">Butaca</h3>
+            <p>
+              <span
+                class="precio text-6xl font-black tracking-tighter"
+                data-mes="4"
+                data-anio="40"
+                >4</span
+              >
+              <span class="periodo font-mono text-xs uppercase tracking-widest"
+                >€ / mes</span
+              >
+            </p>
+            <div
+              class="border-t-2 border-dashed border-current opacity-35"
+            ></div>
+            <ul class="space-y-2 text-noche/80 dark:text-papel/80">
+              <li>✦ Entradas a 3,5 € en todas las sesiones</li>
+              <li>✦ La programación del mes en tu correo</li>
+            </ul>
+            <button
+              class="elegir mt-auto border border-noche px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest transition hover:border-butaca hover:bg-butaca hover:text-noche dark:border-papel"
+            >
+              Elegir Butaca
+            </button>
+          </article>
+
+          <!-- plan 2 (destacado) -->
+          <article
+            class="plan ticket relative flex flex-col gap-6 bg-butaca p-8 text-noche transition hover:-translate-y-1 focus-within:-translate-y-1"
+            data-plan="Gallinero"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <span
+              class="animate-latido absolute top-6 right-6 bg-noche px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-papel"
+              >El más elegido</span
+            >
+            <p class="font-mono text-xs uppercase tracking-widest">(02)</p>
+            <h3 class="text-4xl leading-none font-black uppercase">
+              Gallinero
+            </h3>
+            <p>
+              <span
+                class="precio text-6xl font-black tracking-tighter"
+                data-mes="9"
+                data-anio="90"
+                >9</span
+              >
+              <span class="periodo font-mono text-xs uppercase tracking-widest"
+                >€ / mes</span
+              >
+            </p>
+            <div
+              class="border-t-2 border-dashed border-current opacity-35"
+            ></div>
+            <ul class="space-y-2">
+              <li>✦ 2 entradas al mes incluidas</li>
+              <li>✦ El resto, a 3,5 €</li>
+              <li>✦ Votas la película del cineclub</li>
+              <li>✦ Invitación a los preestrenos</li>
+            </ul>
+            <button
+              class="elegir mt-auto bg-noche px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest text-papel transition hover:bg-papel hover:text-noche"
+            >
+              Elegir Gallinero
+            </button>
+          </article>
+
+          <!-- plan 3 -->
+          <article
+            class="plan ticket flex flex-col gap-6 bg-noche/5 p-8 transition hover:-translate-y-1 focus-within:-translate-y-1 dark:bg-papel/5"
+            data-plan="Familia"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <p class="font-mono text-xs uppercase tracking-widest text-butaca">
+              (03)
+            </p>
+            <h3 class="text-4xl leading-none font-black uppercase">Familia</h3>
+            <p>
+              <span
+                class="precio text-6xl font-black tracking-tighter"
+                data-mes="14"
+                data-anio="140"
+                >14</span
+              >
+              <span class="periodo font-mono text-xs uppercase tracking-widest"
+                >€ / mes</span
+              >
+            </p>
+            <div
+              class="border-t-2 border-dashed border-current opacity-35"
+            ></div>
+            <ul class="space-y-2 text-noche/80 dark:text-papel/80">
+              <li>✦ 2 adultos y hasta 3 menores</li>
+              <li>✦ 4 entradas al mes incluidas</li>
+              <li>✦ Matinales de fin de semana sin coste para los menores</li>
+            </ul>
+            <button
+              class="elegir mt-auto border border-noche px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest transition hover:border-butaca hover:bg-butaca hover:text-noche dark:border-papel"
+            >
+              Elegir Familia
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-noche/15 dark:border-papel/15">
+    <div
+      class="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-3 md:px-10"
+    >
+      <div>
+        <p class="text-4xl font-black tracking-tighter uppercase">
+          El Gallinero<span class="animate-neon text-butaca">.</span>
+        </p>
+        <p class="font-mono text-xs uppercase tracking-widest leading-loose">
+          <a
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
+            >Cine de barrio Lavapies</a
+          >
+        </p>
+      </div>
+      <div class="font-mono text-xs uppercase tracking-widest leading-loose">
+        <p>
+          <a
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
+            >Calle de Jedet, 67, Madrid</a
+          >
+        </p>
+        <p>
+          <a
+            href="tel:+34910000000"
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
+            >91 000 00 00</a
+          >
+        </p>
+        <p>
+          <a
+            href="mailto:hola@elgallinerocine.es"
+            class="normal-case underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
+            >hola@elgallinerocine.es</a
+          >
+        </p>
+      </div>
+      <ul
+        class="flex gap-6 font-mono text-xs uppercase tracking-widest md:justify-end"
+      >
+        <li>
+          <a
+            href="#"
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current"
+            >Letterboxd</a
+          >
+        </li>
+        <li>
+          <a
+            href="#top"
+            class="arriba underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current"
+            >Arriba ↑</a
+          >
+        </li>
+      </ul>
+    </div>
+    <p
+      class="mx-auto max-w-7xl px-5 pb-10 font-mono text-[10px] uppercase tracking-widest text-gris md:px-10"
+    >
+      © <span class="anio"></span> El Gallinero · Cine de barrio
+    </p>
+  </footer>
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/socio.js"></script>
 </boby>
