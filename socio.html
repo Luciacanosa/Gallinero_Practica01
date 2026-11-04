@@ -179,6 +179,48 @@
         aria-hidden="true"
       ></div>
     </section>
+
+    <!-- PLANES -->
+    <section
+      id="planes"
+      class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28"
+      aria-labelledby="titulo-planes"
+    >
+      <div
+        class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+      >
+        <h2
+          id="titulo-planes"
+          class="text-5xl leading-none font-black tracking-tighter uppercase md:text-8xl"
+          data-aos="fade-right"
+        >
+          Planes
+        </h2>
+
+        <!-- interruptor mensual / anual (jQuery) -->
+        <div
+          class="flex border border-noche/30 font-mono text-xs uppercase tracking-widest dark:border-papel/30"
+          role="group"
+          aria-label="Forma de pago"
+          data-aos="fade-left"
+        >
+          <button
+            class="btn-pago bg-butaca px-5 py-3 text-noche"
+            data-pago="mes"
+            aria-pressed="true"
+          >
+            Mensual
+          </button>
+          <button
+            class="btn-pago px-5 py-3 transition-colors hover:text-butaca"
+            data-pago="anio"
+            aria-pressed="false"
+          >
+            Anual · 2 meses gratis
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -190,23 +232,31 @@
         <p class="text-4xl font-black tracking-tighter uppercase">
           El Gallinero<span class="animate-neon text-butaca">.</span>
         </p>
-        <p class="mt-3 text-noche/70 dark:text-papel/70">
-          Cine de barrio en Lavapiés.
+        <p class="font-mono text-xs uppercase tracking-widest leading-loose">
+          <a
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
+            >Cine de barrio Lavapies</a
+          >
         </p>
       </div>
       <div class="font-mono text-xs uppercase tracking-widest leading-loose">
-        <p>Calle de Jedet, 67 · Madrid</p>
+        <p>
+          <a
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
+            >Calle de Jedet, 67, Madrid</a
+          >
+        </p>
         <p>
           <a
             href="tel:+34910000000"
-            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current"
+            class="underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
             >91 000 00 00</a
           >
         </p>
         <p>
           <a
             href="mailto:hola@elgallinerocine.es"
-            class="normal-case underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current"
+            class="normal-case underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca focus-visible:decoration-current"
             >hola@elgallinerocine.es</a
           >
         </p>
