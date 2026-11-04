@@ -1,63 +1,62 @@
 <!doctype html>
-<!-- cursor-none + **:cursor-none en <html>: oculta la flecha en toda la ventana, también en enlaces y botones -->
-<html lang="es" class="dark scroll-smooth cursor-none **:cursor-none">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cine Lido - Tu Cine de Barrio</title>
 
-    <!-- tipografías importadas de Adobe -->
-    <link rel="stylesheet" href="https://use.typekit.net/kie0hig.css" />
+<html lang="es" class="scroll-smooth cursor-none **:cursor-none">
+  <!doctype html>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <html lang="es" class="dark">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>El Gallinero · Cine de barrio en Lavapiés</title>
+      <meta
+        name="description"
+        content="El Gallinero, cine de barrio en Lavapiés: cartelera en versión original, cineclub, matinales y alquiler de sala."
+      />
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <!-- tipografías -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
 
-    <!-- Tailwind CSS v4 CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- Font Awesome: iconos del menú hamburguesa -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      />
 
-    <!-- Estilos con @theme según directrices Tailwind v4 -->
-    <style type="text/tailwindcss">
-      @theme {
-        --color-celuloide: #f1ebdd;
-        --color-proyector: #17120f;
-        --color-gallo: #8a2b25;
-        --color-platea: #3f5130;
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 
-        /* Nombres exactos para las fuentes de Adobe en vuestro sistema */
-        --font-titulo: "pacaembu", sans-serif;
-        --font-texto: "bulletin-typewriter", monospace;
-      }
+      <!-- AOS -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-      /* refuerzo: ninguna parte de la página muestra la flecha del sistema */
-      @layer base {
-        *,
-        *::before,
-        *::after {
-          cursor: none !important;
+      <!-- Swiper -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css"
+      />
+
+      <!-- Tailwind CSS v4 CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+      <!-- sistema de diseño con @theme + modo oscuro con la clase .dark -->
+      <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+        @theme {
+          --color-noche: #0e0e0e;
+          --color-butaca: #e63b2e;
+          --color-papel: #f2efe9;
+          --color-gris: #8a8780;
+          --font-cartel: "Archivo", sans-serif;
+          --font-mono: "Space Mono", monospace;
         }
-      }
-    </style>
-  </head>
+      </style>
 
-  <body class="min-h-screen">
-    <!-- cursor personalizado: circulito rojo -->
-    <div
-      class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#6e0000] bg-[#6e0000] transition-[scale,background-color] duration-200 ease-in-out"
-    ></div>
-
-    <!-- HEADER Y NAV -->
-    <header class=""></header>
-
-    <main></main>
-
-    <!-- FOOTER -->
-    <footer class=""></footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+      <!-- hoja de estilos propia: solo lo que Tailwind no resuelve (animaciones y forma de entrada) -->
+      <link rel="stylesheet" href="css/style.css" />
+    </head>
+  </html>
 </html>
