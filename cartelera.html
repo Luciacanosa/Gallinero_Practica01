@@ -65,6 +65,63 @@
   <div
     class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-butaca bg-butaca transition-[scale,background-color] duration-200 ease-in-out"
   ></div>
+  <!-- header -->
+  <header
+    class="navbar sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-noche/15 bg-papel/90 px-5 py-3 backdrop-blur md:px-10 dark:border-papel/15 dark:bg-noche/90"
+  >
+    <div class="logo">
+      <a href="index.html" class="group flex items-center gap-3">
+        <img
+          src="img/gallinero logo.png"
+          alt="Logo de El Gallinero"
+          width="800"
+          height="737"
+          class="h-10 w-auto transition-transform duration-300 group-hover:-rotate-6 group-focus-visible:-rotate-6 md:h-12 dark:brightness-[1.7]"
+        />
+        <span
+          class="text-lg leading-none font-black tracking-tight uppercase md:text-xl"
+          >El Gallinero<span class="text-butaca">.</span></span
+        >
+      </a>
+    </div>
+    <!-- Icono hamburguesa -->
+    <div class="burger md:hidden">
+      <i
+        class="fas fa-bars p-2 text-2xl text-noche transition-colors hover:text-butaca focus-visible:text-butaca dark:text-papel"
+        role="button"
+        tabindex="0"
+        aria-label="Abrir o cerrar el menú"
+      ></i>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav
+      class="nav-links menu absolute inset-x-0 top-full hidden flex-col items-start border-b border-noche/15 bg-papel px-5 py-4 font-mono text-sm uppercase tracking-widest md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-xs dark:border-papel/15 dark:bg-noche md:dark:bg-transparent [&.menu-show]:flex"
+      aria-label="Principal"
+    >
+      <a
+        href="index.html"
+        class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+        >Inicio</a
+      >
+      <a
+        href="cartelera.html"
+        class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+        >Cartelera</a
+      >
+      <a
+        href="socio.html"
+        class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+        >Hazte socio</a
+      >
+      <a
+        href="contacto.html"
+        class="py-3 underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current md:py-0"
+        >Contacto</a
+      >
+    </nav>
+  </header>
+
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
