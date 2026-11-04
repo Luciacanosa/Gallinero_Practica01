@@ -98,3 +98,23 @@ $(".faq-btn").on("click", function () {
   $faq.find(".faq-texto").slideToggle(250);
   $faq.find(".faq-icono").toggleClass("rotate-45");
 });
+// ----- dudas frecuentes (acordeón con jQuery) -----
+
+// las respuestas empiezan cerradas (jQuery controla si se ven o no)
+$(".faq-texto").removeClass("hidden").hide();
+
+// al pulsar una pregunta: se abre su respuesta y se cierran las demás
+// .off("click") quita clics repetidos para que no se abra y se cierre a la vez
+$(".faq-btn")
+  .off("click")
+  .on("click", function () {
+    const $faq = $(this).closest(".faq");
+
+    // cierra las demás
+    $(".faq").not($faq).find(".faq-texto").stop(true, true).slideUp(250);
+    $(".faq").not($faq).find(".faq-icono").removeClass("rotate-45");
+
+    // abre o cierra la pulsada y gira el + para que parezca una ×
+    $faq.find(".faq-texto").stop(true, true).slideToggle(250);
+    $faq.find(".faq-icono").toggleClass("rotate-45");
+  });
