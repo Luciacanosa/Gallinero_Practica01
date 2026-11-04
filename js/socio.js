@@ -1,6 +1,9 @@
+
 // =====================================================
 // BLOQUE COMÚN (igual en script.js, cartelera.js, socio.js y contacto.js)
 // =====================================================
+
+
 
 // ----- cursor personalizado (punto rojo) -----
 $(document).mousemove(function (e) {
@@ -61,6 +64,7 @@ $("#btn-tema").on("click", function () {
     localStorage.setItem("tema", oscuro ? "oscuro" : "claro");
   } catch (e) {}
 });
+
 
 // ----- footer: año actual y volver arriba -----
 $(".anio").text(new Date().getFullYear());
@@ -164,3 +168,4 @@ if (emailDesdeInicio) {
     $("html, body").animate({ scrollTop: $("#alta").offset().top - 70 }, 700);
   });
 }
+
