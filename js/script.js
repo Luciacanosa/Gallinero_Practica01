@@ -1,23 +1,23 @@
-// efectos para el cursor
-
-// el circulito sigue al ratón
+// ----- cursor personalizado (punto rojo) -----
 $(document).mousemove(function (e) {
-  $(".cursor-index").css({
-    left: e.clientX + "px",
-    top: e.clientY + "px",
-  });
+  $(".cursor-index").css({ left: e.clientX + "px", top: e.clientY + "px" });
 });
-
-// al pasar por enlaces y botones: se agranda y queda solo el borde
-$("a, button").hover(
+// con "on" funciona también en botones creados desde JS
+$(document).on(
+  "mouseenter",
+  "a, button, label, input, select, textarea, .burger > i",
   function () {
     $(".cursor-index")
       .addClass("scale-180 bg-transparent")
-      .removeClass("bg-[#6e0000]");
+      .removeClass("bg-butaca");
   },
+);
+$(document).on(
+  "mouseleave",
+  "a, button, label, input, select, textarea, .burger > i",
   function () {
     $(".cursor-index")
       .removeClass("scale-180 bg-transparent")
-      .addClass("bg-[#6e0000]");
+      .addClass("bg-butaca");
   },
 );
