@@ -49,3 +49,11 @@ $(".menu a").each(function () {
     $(this).addClass("text-butaca").attr("aria-current", "page");
   }
 });
+
+// ----- modo claro / oscuro (se recuerda al cambiar de página) -----
+$("#btn-tema").on("click", function () {
+  const oscuro = document.documentElement.classList.toggle("dark");
+  try {
+    localStorage.setItem("tema", oscuro ? "oscuro" : "claro");
+  } catch (e) {}
+});
