@@ -64,3 +64,25 @@ $(".arriba").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, 600);
 });
+
+// =====================================================
+// INICIO (index.html)
+// =====================================================
+
+// AOS: animaciones al hacer scroll
+AOS.init({ duration: 800, once: true, offset: 60 });
+
+// Typed.js: la frase de la portada se escribe sola
+new Typed("#typed", {
+  strings: [
+    "en versión original.",
+    "de autor.",
+    "de barrio.",
+    "a 4 € los miércoles.",
+  ],
+  typeSpeed: 55,
+  backSpeed: 30,
+  backDelay: 1800,
+  loop: true,
+  cursorChar: "_",
+});
