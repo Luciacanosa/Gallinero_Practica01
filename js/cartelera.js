@@ -54,3 +54,42 @@ $("#btn-tema").on("click", function () {
     localStorage.setItem("tema", oscuro ? "oscuro" : "claro");
   } catch (e) {}
 });
+
+// ----- footer -----
+$(".anio").text(new Date().getFullYear());
+$(".arriba").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, 600);
+});
+
+// ===== Cartelera  =====
+
+AOS.init({ duration: 800, once: true, offset: 60 });
+
+// Swiper (cinta de texto infinita)
+new Swiper(".cinta", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  speed: 7000,
+  allowTouchMove: false,
+  autoplay: { delay: 0, disableOnInteraction: false },
+});
+
+// Swiper: carrusel de películas destacadas
+// se mueve con el trackpad (dos dedos a izquierda/derecha) y con el dedo en el móvil
+new Swiper(".destacadas", {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  freeMode: { enabled: true, sticky: false, momentum: true }, // deslizamiento suave, como un scroll
+  mousewheel: {
+    forceToAxis: true, // solo responde al gesto horizontal; el scroll vertical sigue bajando la página
+    sensitivity: 1,
+    releaseOnEdges: true,
+  },
+  simulateTouch: false, // no se arrastra pulsando con el ratón
+  breakpoints: {
+    640: { slidesPerView: 2.2 },
+    1024: { slidesPerView: 3.5 },
+  },
+});
