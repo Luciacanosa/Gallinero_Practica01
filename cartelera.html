@@ -1,66 +1,68 @@
 <!doctype html>
-
 <html lang="es" class="scroll-smooth cursor-none **:cursor-none">
-  <!doctype html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Gallinero · Cine de barrio en Lavapiés</title>
+    <meta
+      name="description"
+      content="El Gallinero, cine de barrio en Lavapiés: cartelera en versión original, cineclub, matinales y alquiler de sala."
+    />
 
-  <html lang="es" class="dark">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>El Gallinero · Cine de barrio en Lavapiés</title>
-      <meta
-        name="description"
-        content="El Gallinero, cine de barrio en Lavapiés: cartelera en versión original, cineclub, matinales y alquiler de sala."
-      />
+    <!-- modo claro/oscuro: se aplica antes de pintar y se recuerda entre páginas -->
+    <script>
+      try {
+        if (localStorage.getItem("tema") === "oscuro")
+          document.documentElement.classList.add("dark");
+      } catch (e) {}
+    </script>
 
-      <!-- tipografías -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
+    <!-- tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-      <!-- Font Awesome: iconos del menú hamburguesa -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      />
+    <!-- Font Awesome: iconos del menú hamburguesa -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-      <!-- jQuery -->
-      <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 
-      <!-- AOS -->
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-      <!-- Swiper -->
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css"
-      />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css"
+    />
 
-      <!-- Tailwind CSS v4 CDN -->
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-      <!-- sistema de diseño con @theme + modo oscuro con la clase .dark -->
-      <style type="text/tailwindcss">
-        @custom-variant dark (&:where(.dark, .dark *));
-        @theme {
-          --color-noche: #0e0e0e;
-          --color-butaca: #e63b2e;
-          --color-papel: #f2efe9;
-          --color-gris: #8a8780;
-          --font-cartel: "Archivo", sans-serif;
-          --font-mono: "Space Mono", monospace;
-        }
-      </style>
+    <!-- sistema de diseño con @theme + modo oscuro con la clase .dark -->
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+      @theme {
+        --color-noche: #0e0e0e;
+        --color-butaca: #e63b2e;
+        --color-papel: #f2efe9;
+        --color-gris: #8a8780;
+        --font-cartel: "Archivo", sans-serif;
+        --font-mono: "Space Mono", monospace;
+      }
+    </style>
 
-      <!-- hoja de estilos propia: solo lo que Tailwind no resuelve (animaciones y forma de entrada) -->
-      <link rel="stylesheet" href="css/style.css" />
-    </head>
-  </html>
-</html>
-<body>
+    <!-- hoja de estilos propia: solo lo que Tailwind no resuelve (animaciones y forma de entrada) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
   <body
     class="min-h-screen bg-papel font-cartel text-noche antialiased transition-colors duration-300 selection:bg-butaca selection:text-papel dark:bg-noche dark:text-papel"
   >
@@ -85,7 +87,7 @@
       <div class="logo">
         <a href="index.html" class="group flex items-center gap-3">
           <img
-            src="img/gallinero logo.png"
+            src="img/gallinero%20logo.png"
             alt="Logo de El Gallinero"
             width="800"
             height="737"
@@ -154,20 +156,20 @@
         >
           <!-- bloque 1 -->
           <div class="flex items-center">
-            <span class="pr-10">Cartelera</span>
+            <span class="pr-10 text-noche dark:text-papel">Cartelera</span>
             <span class="pr-10 text-butaca">✦</span>
             <span
-              class="pr-10 text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
+              class="pr-10 tracking-normal text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
               >Cartelera</span
             >
             <span class="pr-10 text-butaca">✦</span>
           </div>
           <!-- bloque 2: copia exacta del 1 para que el bucle no se note -->
           <div class="flex items-center">
-            <span class="pr-10">Cartelera</span>
+            <span class="pr-10 text-noche dark:text-papel">Cartelera</span>
             <span class="pr-10 text-butaca">✦</span>
             <span
-              class="pr-10 text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
+              class="pr-10 tracking-normal text-transparent [-webkit-text-stroke:2px_var(--color-noche)] dark:[-webkit-text-stroke:2px_var(--color-papel)]"
               >Cartelera</span
             >
             <span class="pr-10 text-butaca">✦</span>
@@ -633,4 +635,4 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="js/cartelera.js"></script>
   </body>
-</body>
+</html>

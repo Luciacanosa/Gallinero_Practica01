@@ -1,37 +1,8 @@
-@layer utilities {
-  .animate-marquee {
-    animation: marquee 30s linear infinite;
-  }
-}
-
-/* el texto está repetido dos veces: al moverse la mitad vuelve al principio sin corte */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* cartlera palabra gigante */
-@layer utilities {
-  .animate-marquee {
-    animation: marquee 30s linear infinite;
-  }
-}
-
-/* el texto está repetido dos veces: al moverse la mitad vuelve al principio sin corte */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* css del index.html */
+/* =========================================================
+   EL GALLINERO · hoja de estilos propia (styles.css)
+   Solo lo que Tailwind no resuelve: foco, forma de entrada,
+   ventana modal y animaciones con @keyframes.
+   ========================================================= */
 
 /* mismo orden de capas que Tailwind v4: sus utilidades siempre ganan */
 @layer theme, base, components, utilities;
@@ -64,180 +35,8 @@
   }
 }
 
-/* ---------- UTILIDADES: clases de animación ---------- */
-@layer utilities {
-  .animate-haz {
-    animation: haz 9s ease-in-out infinite alternate;
-  }
-  .animate-tira {
-    animation: tira 6s linear infinite;
-  }
-  .animate-neon {
-    animation: parpadeo 4s infinite;
-  }
-  .animate-carnet {
-    animation: carnet 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  }
-  .animate-latido {
-    animation: latido 1.8s ease-in-out infinite;
-  }
-}
-
-/* ---------- ANIMACIONES ---------- */
-@keyframes haz {
-  from {
-    transform: rotate(8deg);
-    opacity: 0.6;
-  }
-  to {
-    transform: rotate(16deg);
-    opacity: 1;
-  }
-}
-
-@keyframes tira {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 360px 0;
-  }
-}
-
-@keyframes parpadeo {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    opacity: 1;
-  }
-  20%,
-  24%,
-  55% {
-    opacity: 0.25;
-  }
-}
-
-@keyframes carnet {
-  from {
-    opacity: 0;
-    transform: perspective(800px) rotateY(-80deg) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: perspective(800px) rotateY(0) scale(1);
-  }
-}
-
-@keyframes latido {
-  0%,
-  100% {
-    transform: scale(1) rotate(-3deg);
-  }
-  50% {
-    transform: scale(1.06) rotate(-3deg);
-  }
-}
-
-/* respeta a quien prefiere menos movimiento */
-@media (prefers-reduced-motion: reduce) {
-  .animate-haz,
-  .animate-tira,
-  .animate-neon,
-  .animate-carnet,
-  .animate-latido {
-    animation: none;
-  }
-
-  /* ventana modal ULTIMA OPORTUNIDAD JRPASS */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-
-    /* centrado con flexbox */
-    align-items: center;
-    justify-content: center;
-  }
-
-  .show-modal {
-    display: flex;
-  }
-
-  .modal-content {
-    background-color: #ff0000;
-    padding: 3rem;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    color: #fff;
-    position: relative;
-  }
-
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fff;
-  }
-
-  .modal-content h2 {
-    color: #fff;
-    font-family: "Climate Crisis", sans-serif;
-  }
-
-  .modal-content p {
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  .show-modal {
-    display: flex;
-  }
-  html,
-  body {
-    cursor: none !important;
-    scroll-behavior: smooth;
-  }
-
-  /* cursor para informacion */
-
-  .cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #6e0000;
-    background-color: #6e0000;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition:
-      transform 0.1s ease,
-      background-color 0.2s ease;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-  }
-}
-/* est es para navbar modo oscuro claro */
-@custom-variant dark (&:where(.dark, .dark *)); /* dentro de <style type="text/tailwindcss">, encima de @theme */
-
-/* CSS PARA LA VENTANA MODAL */
-/* no lo hemos hecho con class ya que ha sido reutilizado de trabajos del curso pasado */
 /* ---------- COMPONENTES: ventana modal HAZTE SOCIO ---------- */
+/* hecha con CSS (no con clases de Tailwind) porque parte del ejemplo de clase */
 @layer components {
   .modal {
     display: none;
@@ -328,7 +127,98 @@
   }
 }
 
-/* animación de entrada de la ventana modal */
+/* ---------- UTILIDADES: clases de animación ---------- */
+@layer utilities {
+  .animate-haz {
+    animation: haz 9s ease-in-out infinite alternate;
+  }
+  .animate-tira {
+    animation: tira 6s linear infinite;
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  .animate-neon {
+    animation: parpadeo 4s infinite;
+  }
+  .animate-carnet {
+    animation: carnet 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .animate-latido {
+    animation: latido 1.8s ease-in-out infinite;
+  }
+}
+
+/* ---------- ANIMACIONES ---------- */
+@keyframes haz {
+  from {
+    transform: rotate(8deg);
+    opacity: 0.6;
+  }
+  to {
+    transform: rotate(16deg);
+    opacity: 1;
+  }
+}
+
+@keyframes tira {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 360px 0;
+  }
+}
+
+/* cinta de palabra gigante: el texto está repetido dos veces,
+   al moverse la mitad vuelve al principio sin corte */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes parpadeo {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes carnet {
+  from {
+    opacity: 0;
+    transform: perspective(800px) rotateY(-80deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(800px) rotateY(0) scale(1);
+  }
+}
+
+@keyframes latido {
+  0%,
+  100% {
+    transform: scale(1) rotate(-3deg);
+  }
+  50% {
+    transform: scale(1.06) rotate(-3deg);
+  }
+}
+
 @keyframes modal-entra {
   from {
     opacity: 0;
@@ -337,5 +227,18 @@
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+/* respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .animate-haz,
+  .animate-tira,
+  .animate-marquee,
+  .animate-neon,
+  .animate-carnet,
+  .animate-latido,
+  .modal-content {
+    animation: none;
   }
 }
