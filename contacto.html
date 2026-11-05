@@ -63,14 +63,13 @@
       }
     </style>
 
-    <!-- hoja de estilos propia: solo lo que Tailwind no resuelve (animaciones y forma de entrada) -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body
     class="min-h-screen bg-papel font-cartel text-noche transition-colors duration-300 selection:bg-butaca selection:text-noche dark:bg-noche dark:text-papel"
   >
-    <!-- cursor personalizado -->
+    <!-- raton personalizado -->
     <div
       class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-butaca bg-butaca transition-[scale,background-color] duration-200 ease-in-out"
     ></div>
@@ -229,7 +228,7 @@
             class="text-2xl leading-tight font-bold transition-colors hover:text-butaca"
             >91 000 00 00</a
           >
-          <p class="mt-2 text-sm text-gris">Horario de 11:00 a 22:30</p>
+          <p class="mt-2 text-sm text-gris font-mono text-xs">Horario de 11:00 a 22:30</p>
         </article>
         <article
           class="flex-1 bg-papel p-8 md:p-10 dark:bg-noche"
@@ -246,7 +245,7 @@
             class="text-lg leading-tight font-bold break-all transition-colors hover:text-butaca lg:text-xl"
             >hola@elgallinerocine.es</a
           >
-          <p class="mt-2 text-sm text-gris">Respondemos lo antes posible</p>
+          <p class="mt-2 text-sm text-gris font-mono text-xs">Respondemos lo antes posible</p>
         </article>
         <article
           class="flex-1 bg-papel p-8 md:p-10 dark:bg-noche"
@@ -259,7 +258,7 @@
             04 Horario
           </p>
           <p class="text-2xl leading-tight font-bold">Mar – Dom</p>
-          <p class="mt-2 text-sm text-gris">Lunes cerrado</p>
+          <p class="mt-2 text-sm text-gris font-mono text-xs">Lunes cerrado</p>
         </article>
       </section>
       <!-- DÓNDE ESTAMOS: mapa -->
@@ -299,7 +298,7 @@
           class="group relative overflow-hidden border border-papel/15"
           data-aos="zoom-in"
         >
-          <!-- el mapa en blanco y negro; se colorea al pasar el ratón -->
+          <!-- el mapa en blanco y negro -->
           <iframe
             title="Mapa de El Gallinero en Lavapiés, Madrid"
             src="https://maps.google.com/maps?q=40.4087,-3.7010&z=16&output=embed"
@@ -353,7 +352,7 @@
                     >+</span
                   >
                 </button>
-                <p class="faq-texto hidden pb-6 text-noche dark:text-papel">
+                <p class="faq-texto hidden pb-6 text-noche dark:text-papel font-mono text-m">
                   Porque así se llamaba el piso de arriba de los cines y teatros
                   de antes: las butacas más baratas, las más ruidosas y las que
                   más disfrutaban la película. Eso queremos ser.
@@ -369,7 +368,7 @@
                     >+</span
                   >
                 </button>
-                <p class="faq-texto hidden pb-6 text-noche dark:text-papel">
+                <p class="faq-texto hidden pb-6 text-noche dark:text-papel font-mono text-m">
                   Sí. La taquilla abre una hora antes de la primera sesión.
                   También puedes reservar por teléfono o por correo y recogerlas
                   al llegar.
@@ -385,7 +384,7 @@
                     >+</span
                   >
                 </button>
-                <p class="faq-texto hidden pb-6 text-noche dark:text-papel">
+                <p class="faq-texto hidden pb-6 text-noche dark:text-papel font-mono text-m">
                   La mayoría, en VOSE. Los domingos por la mañana hay sesión
                   familiar doblada.
                 </p>
@@ -400,7 +399,7 @@
                     >+</span
                   >
                 </button>
-                <p class="faq-texto hidden pb-6 text-noche dark:text-papel">
+                <p class="faq-texto hidden pb-6 text-noche dark:text-papel font-mono text-m">
                   Claro: presentaciones, cumpleaños, rodajes o proyecciones
                   privadas. Escríbenos con la fecha y el número de personas y te
                   pasamos presupuesto.
