@@ -67,6 +67,13 @@
         class="cursor-index pointer-events-none fixed top-0 left-0 z-[9999] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-butaca bg-butaca transition-[scale,background-color] duration-200 ease-in-out"
       ></div>
 
+      <img
+        src="img/gallinero%20logo.png"
+        alt=""
+        aria-hidden="true"
+        class="pointer-events-none fixed top-1/2 left-1/2 -z-10 w-[90vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 opacity-[0.06] select-none dark:opacity-[0.08] dark:brightness-[1.7]"
+      />
+
       <!-- Botón opcional para abrir manualmente -->
       <button id="openModal" class="btn-modal">Abrir Modal</button>
 
@@ -494,6 +501,87 @@
                   </p>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- HORARIO Y UBICACIÓN -->
+        <section
+          id="horario"
+          class="bg-noche text-papel dark:bg-papel dark:text-noche"
+          aria-labelledby="titulo-horario"
+        >
+          <div
+            class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2 md:px-10 md:py-28"
+          >
+            <div data-aos="fade-right">
+              <h2
+                id="titulo-horario"
+                class="mb-10 text-5xl leading-none font-black tracking-tighter uppercase md:text-7xl"
+              >
+                Horario
+              </h2>
+              <dl
+                class="divide-y divide-papel/20 border-y border-papel/20 dark:divide-noche/20 dark:border-noche/20"
+              >
+                <div class="flex justify-between py-4">
+                  <dt class="font-mono text-sm uppercase tracking-widest">
+                    Lunes
+                  </dt>
+                  <dd class="font-bold text-butaca">Cerrado</dd>
+                </div>
+                <div class="flex justify-between py-4">
+                  <dt class="font-mono text-sm uppercase tracking-widest">
+                    Martes a jueves
+                  </dt>
+                  <dd class="font-bold">17:00 – 23:30</dd>
+                </div>
+                <div class="flex justify-between py-4">
+                  <dt class="font-mono text-sm uppercase tracking-widest">
+                    Viernes
+                  </dt>
+                  <dd class="font-bold">16:00 – 00:30</dd>
+                </div>
+                <div class="flex justify-between py-4">
+                  <dt class="font-mono text-sm uppercase tracking-widest">
+                    Sábado y domingo
+                  </dt>
+                  <dd class="font-bold">11:00 – 00:30</dd>
+                </div>
+              </dl>
+              <p class="mt-4 text-sm text-papel/60 dark:text-noche/60">
+                La taquilla abre una hora antes de la primera sesión.
+              </p>
+            </div>
+
+            <div data-aos="fade-left">
+              <h2
+                class="mb-10 text-5xl leading-none font-black tracking-tighter uppercase md:text-7xl"
+              >
+                Dónde
+              </h2>
+              <address class="mb-6 text-2xl leading-tight font-bold not-italic">
+                Calle de Lavapiés, 27<br />28012 Madrid
+              </address>
+              <p class="mb-6 font-mono text-xs uppercase tracking-widest">
+                <span class="text-butaca">Metro</span> · Lavapiés (L3)
+              </p>
+              <div
+                class="group relative overflow-hidden border border-papel/20 dark:border-noche/20"
+              >
+                <iframe
+                  title="Mapa de El Gallinero en Lavapiés, Madrid"
+                  src="https://maps.google.com/maps?q=40.4087,-3.7010&z=16&output=embed"
+                  class="h-72 w-full grayscale transition duration-700 group-hover:grayscale-0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a
+                href="contacto.html"
+                class="mt-6 inline-block font-mono text-sm uppercase tracking-widest underline decoration-transparent decoration-2 underline-offset-4 transition hover:text-butaca hover:decoration-current focus-visible:decoration-current"
+                >Más formas de contacto →</a
+              >
             </div>
           </div>
         </section>
