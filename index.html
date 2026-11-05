@@ -74,25 +74,6 @@
         class="pointer-events-none fixed top-1/2 left-1/2 -z-10 w-[90vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 opacity-[0.06] select-none dark:opacity-[0.08] dark:brightness-[1.7]"
       />
 
-      <!-- Botón opcional para abrir manualmente -->
-      <button id="openModal" class="btn-modal">Abrir Modal</button>
-
-      <!-- Ventana modal -->
-      <div id="modalWindow" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>ULTIMA OPORTUNIDAD!</h2>
-          <p>
-            Si estás pensando en viajar a Kyoto, esta es tu oportunidad.<br />
-            Quedan las últimas diez plazas para viajar por todo Japón en tren
-            con tu JR PASS.
-          </p>
-          <a href="turismo.html" target="_blank" class="btn-turismo">
-            Ir a la página de turismo
-          </a>
-        </div>
-      </div>
-
       <!-- Menú de navegación (igual en las 4 páginas) -->
       <header
         class="navbar sticky top-0 z-50 flex items-center justify-between gap-4 border-b border-noche/15 bg-papel/90 px-5 py-3 backdrop-blur md:px-10 dark:border-papel/15 dark:bg-noche/90"
@@ -158,6 +139,20 @@
           </button>
         </nav>
       </header>
+
+      <!-- Ventana modal: HAZTE SOCIO (se abre sola a los 10 s o con el botón #openModal) -->
+      <div id="modalWindow" class="modal">
+        <div class="modal-content">
+          <button class="close" aria-label="Cerrar ventana">&times;</button>
+          <h2>¡Hazte socio!</h2>
+          <p>
+            Entradas a 3,5 € en todas las sesiones, votas la película del
+            cineclub y te enteras de los preestrenos antes que nadie.<br />
+            Tu cuota ayuda a que el cine del barrio siga abierto.
+          </p>
+          <a href="socio.html" class="btn-socio">Quiero ser socio →</a>
+        </div>
+      </div>
 
       <main class="overflow-x-hidden">
         <!-- PORTADA -->

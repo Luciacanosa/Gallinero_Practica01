@@ -1,3 +1,7 @@
+// =====================================================
+// BLOQUE COMÚN (igual en script.js, cartelera.js, socio.js y contacto.js)
+// =====================================================
+
 // ----- cursor personalizado (punto rojo) -----
 $(document).mousemove(function (e) {
   $(".cursor-index").css({ left: e.clientX + "px", top: e.clientY + "px" });
@@ -34,7 +38,7 @@ burger.addEventListener("click", function () {
   menu_opt.classList.toggle("menu-show");
 });
 
-// extra: que el icono del menú también funcione al darle con el teclado
+// extra: que el icono del menú también funcione con el teclado (Enter o espacio)
 burger.addEventListener("keydown", function (e) {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
@@ -42,7 +46,7 @@ burger.addEventListener("keydown", function (e) {
   }
 });
 
-// ----- header: enlace de la pagina en la que estas -----
+// ----- header: enlace de la página actual en rojo -----
 const paginaActual = window.location.pathname.split("/").pop() || "index.html";
 $(".menu a").each(function () {
   if ($(this).attr("href") === paginaActual) {
@@ -65,7 +69,9 @@ $(".arriba").on("click", function (e) {
   $("html, body").animate({ scrollTop: 0 }, 600);
 });
 
+// =====================================================
 // INICIO (index.html)
+// =====================================================
 
 // AOS: animaciones al hacer scroll
 AOS.init({ duration: 800, once: true, offset: 60 });
@@ -124,6 +130,3 @@ function iniciarCarrusel(selector) {
   showNextImage(); // mostrar la primera
   setInterval(showNextImage, 3000); // cambiar cada 3 segundos
 }
-
-// arrancamos el carrusel de la sección "Nuestra historia"
-iniciarCarrusel("#carrusel-historia");
