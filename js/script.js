@@ -117,7 +117,7 @@ window.addEventListener("click", function (event) {
   }
 });
 // Abrir modal automáticamente a los 10 segundos
-setTimeout(openModalWindow, 10000);
+setTimeout(openModalWindow, 5000);
 // carrusel fotos parte historia pag principal
 function iniciarCarrusel(selector) {
   const images = document.querySelectorAll(selector + " img");
